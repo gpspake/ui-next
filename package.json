@@ -1,11 +1,25 @@
 {
   "name": "ui-next",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "license": "MIT",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.9",
     "react": "^18.1.0",
+    "rollup": "^2.74.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "tslib": "^2.4.0",
     "typescript": "^4.7.2"
   }
 }
