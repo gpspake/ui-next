@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="horizontal-stacked-bar-button" transform="translate(-12.000000, -9.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(12.000000, 9.000000)">
+                <polygon id="Path" fill="currentColor" points="2 22 24 22 24 24 0 24 0 0 2 0"></polygon>
+                <path d="M4,11 C4,9.895 4.893,9 5.995,9 L14,9 L14,13 L5.995,13 C4.893,13 4,12.112 4,11 Z" id="Path" fill="currentColor"></path>
+                <path d="M4,18 C4,16.895 4.893,16 5.995,16 L9,16 L9,20 L5.995,20 C4.893,20 4,19.112 4,18 Z" id="Path-Copy-2" fill="currentColor"></path>
+                <path d="M16.495,2.5 L12.49,2.5 C12.077214,2.5 11.7036097,2.6676939 11.4331873,2.93879411 C11.1623434,3.21031677 10.995,3.5855057 10.995,4 C10.995,4.41640665 11.1613303,4.7912948 11.4314786,5.0621202 C11.7021111,5.33343094 12.0765075,5.5 12.49,5.5 L16.495,5.5 L16.495,2.5 Z" id="Path-Copy-4" stroke="currentColor" transform="translate(13.745000, 4.000000) rotate(-180.000000) translate(-13.745000, -4.000000) "></path>
+                <path d="M20.505,9.5 L15.995,9.5 C15.582214,9.5 15.2086097,9.6676939 14.9381873,9.93879411 C14.6673434,10.2103168 14.5,10.5855057 14.5,11 C14.5,11.4164066 14.6663303,11.7912948 14.9364786,12.0621202 C15.2071111,12.3334309 15.5815075,12.5 15.995,12.5 L20.505,12.5 L20.505,9.5 Z" id="Path-Copy" stroke="currentColor" transform="translate(17.502500, 11.000000) rotate(-180.000000) translate(-17.502500, -11.000000) "></path>
+                <path d="M17.495,16.5 L10.995,16.5 C10.582214,16.5 10.2086097,16.6676939 9.93818726,16.9387941 C9.66734341,17.2103168 9.5,17.5855057 9.5,18 C9.5,18.4164066 9.6663303,18.7912948 9.93647864,19.0621202 C10.2071111,19.3334309 10.5815075,19.5 10.995,19.5 L17.495,19.5 L17.495,16.5 Z" id="Path-Copy-3" stroke="currentColor" transform="translate(13.497500, 18.000000) rotate(-180.000000) translate(-13.497500, -18.000000) "></path>
+                <path d="M4,4 C4,2.895 4.893,2 5.995,2 L10.995,2 L10.995,6 L5.995,6 C4.893,6 4,5.112 4,4 Z" id="Path-Copy-5" fill="currentColor" transform="translate(7.497500, 4.000000) rotate(-360.000000) translate(-7.497500, -4.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
