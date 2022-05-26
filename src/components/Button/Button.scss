@@ -1,0 +1,354 @@
+:root {
+    --button-height--small: 30px;
+    --button-height--medium: 36px;
+    --button-height--large: 44px;
+    --button-height-tight--small: 18px;
+    --button-height-tight--medium: 22px;
+    --button-height-tight--large: 30px;
+    --button-hover-transition: all 0.3s ease-in-out 0s;
+}
+
+.base {
+    composes: button-reset from '../../styles/helpers.local.css';
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 0 10px;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: var(--font-weight-normal);
+    text-transform: capitalize;
+    transition: var(--button-hover-transition);
+}
+
+.base[disabled] {
+    cursor: not-allowed;
+}
+
+/**
+ * Colors
+ */
+.primary {
+    border-color: var(--mid-blue);
+    background-color: var(--mid-blue);
+    color: var(--mid-blue);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--mid-blue) tint(20%));
+     background-color: color(var(--mid-blue) tint(20%));
+     color: color(var(--mid-blue) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--mid-blue) lightness(+30%));
+     background-color: color(var(--mid-blue) lightness(+30%));
+     color: color(var(--mid-blue) lightness(+30%));
+ }
+}
+
+.primary.boxyNormal {
+    box-shadow: 0 2px 4px color(var(--gray));
+}
+
+.primary-hc {
+    border-color: var(--dark-blue);
+    background-color: var(--dark-blue);
+    color: var(--dark-blue);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--dark-blue) tint(20%));
+     background-color: color(var(--dark-blue) tint(20%));
+     color: color(var(--dark-blue) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--dark-blue) lightness(+45%));
+     background-color: color(var(--dark-blue) lightness(+45%));
+     color: color(var(--dark-blue) lightness(+45%));
+ }
+}
+
+.light {
+&.active {
+     font-weight: bold;
+     background-color: var(--gray);
+ }
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     background-color: var(--light-gray);
+ }
+
+&[disabled] {
+     border-color: color(var(--gray) lightness(+40%));
+     background-color: color(var(--gray) lightness(+40%));
+     color: color(var(--dark-navy) lightness(+40%));
+ }
+}
+
+.grayscale {
+    border-color: color(var(--mid-gray) tint(20%));
+    background-color: color(var(--mid-gray) tint(20%));
+    color: color(var(--mid-gray) tint(20%));
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: var(--mid-gray);
+     background-color: var(--mid-gray);
+     color: var(--mid-gray);
+ }
+
+&[disabled] {
+     border-color: color(var(--mid-gray) lightness(+40%));
+     background-color: color(var(--mid-gray) lightness(+40%));
+     color: color(var(--mid-gray) lightness(+40%));
+ }
+}
+
+.grayscale-hc {
+    border-color: var(--dark-gray);
+    background-color: var(--dark-gray);
+    color: var(--dark-gray);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: var(--dark-gray);
+     background-color: var(--dark-gray);
+     color: var(--dark-gray);
+ }
+
+&[disabled] {
+     border-color: color(var(--dark-gray) lightness(+40%));
+     background-color: color(var(--dark-gray) lightness(+40%));
+     color: color(var(--dark-gray) lightness(+40%));
+ }
+}
+
+.status--positive {
+    border-color: var(--status-positive);
+    background-color: var(--status-positive);
+    color: var(--status-positive);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--status-positive) tint(20%));
+     background-color: color(var(--status-positive) tint(20%));
+     color: color(var(--status-positive) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--status-positive) lightness(+20%));
+     background-color: color(var(--status-positive) lightness(+20%));
+     color: color(var(--status-positive) lightness(+20%));
+ }
+}
+
+.status--warning {
+    border-color: var(--status-warning);
+    background-color: var(--status-warning);
+    color: var(--status-warning);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--status-warning) tint(20%));
+     background-color: color(var(--status-warning) tint(20%));
+     color: color(var(--status-warning) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--status-warning) lightness(+20%));
+     background-color: color(var(--status-warning) lightness(+20%));
+     color: color(var(--status-warning) lightness(+20%));
+ }
+}
+
+.status--negative {
+    border-color: var(--status-negative);
+    background-color: var(--status-negative);
+    color: var(--status-negative);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--status-negative) tint(20%));
+     background-color: color(var(--status-negative) tint(20%));
+     color: color(var(--status-negative) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--status-negative) lightness(+20%));
+     background-color: color(var(--status-negative) lightness(+20%));
+     color: color(var(--status-negative) lightness(+20%));
+ }
+}
+
+.status--negative-hc {
+    border-color: var(--status-negative-hc);
+    background-color: var(--status-negative-hc);
+    color: var(--status-negative-hc);
+
+&:focus:not([disabled]),
+&:hover:not([disabled]) {
+     border-color: color(var(--status-negative-hc) tint(20%));
+     background-color: color(var(--status-negative-hc) tint(20%));
+     color: color(var(--status-negative-hc) tint(20%));
+ }
+
+&[disabled] {
+     border-color: color(var(--status-negative-hc) lightness(+20%));
+     background-color: color(var(--status-negative-hc) lightness(+20%));
+     color: color(var(--status-negative-hc) lightness(+20%));
+ }
+}
+
+/**
+ * Themes
+ */
+.normal,
+.boxyNormal {
+    color: var(--white) !important;
+}
+
+.boxyLight,
+.boxyOutline {
+    color: var(--dark-navy);
+    background-color: var(--dark-white);
+    border: 1px solid var(--light-gray);
+}
+
+.boxyOutline {
+    border-color: var(--mid-blue);
+    color: var(--mid-blue);
+}
+
+.outline,
+.boxyOutline {
+    background-color: transparent !important;
+}
+
+.contentOnly {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    padding: 0;
+    min-width: auto;
+}
+
+.boxyNormal.small,
+.boxyLight.small,
+.boxyOutline.small {
+    border-radius: calc(var(--button-height--small) / 12);
+}
+
+.boxyNormal.medium,
+.boxyLight.medium,
+.boxyOutline.medium {
+    border-radius: calc(var(--button-height--medium) / 12);
+}
+
+.boxyNormal.large,
+.boxyLight.large,
+.boxyOutline.large {
+    border-radius: calc(var(--button-height--large) / 12);
+}
+
+.boxyTight {
+    color: var(--white) !important;
+
+&.small {
+     height: var(--button-height-tight--small);
+     min-width: auto;
+     border-radius: 3px;
+ }
+
+&.medium {
+     height: var(--button-height-tight--medium);
+     min-width: auto;
+     border-radius: 3px;
+ }
+
+&.large {
+     height: var(--button-height-tight--large);
+     min-width: auto;
+     border-radius: 3px;
+ }
+
+span {
+    line-height: normal;
+}
+}
+
+/**
+ * Sizes
+ */
+.small {
+    height: var(--button-height--small);
+    min-width: auto;
+    border-radius: calc(var(--button-height--small) / 2);
+    font-size: 0.75em;
+}
+
+.medium {
+    height: var(--button-height--medium);
+    min-width: 100px;
+    border-radius: calc(var(--button-height--medium) / 2);
+    font-size: 0.9em;
+}
+
+.large {
+    height: var(--button-height--large);
+    min-width: 200px;
+    border-radius: calc(var(--button-height--large) / 2);
+    font-size: 1.25em;
+}
+
+/* Button display modifiers */
+.block {
+    display: block;
+    width: 100%;
+}
+
+/* Button children styles */
+.inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+& > * {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: none;
+  }
+}
+
+.spinnerBase {
+    position: absolute;
+    height: 26px !important;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.icon {
+    margin-right: 0.4em;
+    flex: 0 0 auto;
+}
+
+.iconOnly .icon {
+    margin: 0;
+}
+
+.text {
+    font-family: var(--sans);
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+.child:hover,
+.base:hover > * {
+    color: currentColor;
+}

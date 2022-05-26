@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './button.css';
+import styles from './Button.scss';
 import Icon from '../Icon';
 import Spinner from '../Spinner';
 import icons from '../Icon/icon-config';
