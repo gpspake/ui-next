@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Button from './Button';
 
-it('changes the class when hovered', () => {
+it('matches snapshot', () => {
   const component = renderer.create(
-    <Button label="Hello world!" />,
+    <Button title={"my-button"}/>,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

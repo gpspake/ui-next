@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`changes the class when hovered 1`] = `
+exports[`matches snapshot 1`] = `
 <button
-  className="button"
+  className="base normal medium primary iconOnly"
+  disabled={false}
+  onClick={[Function]}
+  title="my-button"
+  type="button"
 >
-  Hello world!
+  <div
+    className="inner"
+  />
 </button>
 `;
