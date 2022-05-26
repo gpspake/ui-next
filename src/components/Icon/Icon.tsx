@@ -5,48 +5,48 @@ import icons from './icon-config';
 
 type IconProps = {
   /**
+   * Name of icon to render.
+   */
+  icon: keyof typeof icons,
+  /**
    * Pass in custom styling like style={{padding: 10px}}
    */
-  customStyling: {},
+  customStyling?: {},
   /**
    * Listen for icon click event and pass back event
    */
-  onClick: React.MouseEventHandler<HTMLButtonElement>,
+  onClick?: React.MouseEventHandler<HTMLButtonElement>,
   /**
    * Listen for icon focus event and pass back event
    */
-  onFocus: React.FocusEventHandler<HTMLInputElement>,
+  onFocus?: React.FocusEventHandler<HTMLInputElement>,
   /**
    * Listen for icon onMouseDown event and pass back event
    */
-  onMouseDown: React.MouseEventHandler<HTMLButtonElement>,
+  onMouseDown?: React.MouseEventHandler<HTMLButtonElement>,
   /**
    * Additional className
    */
-  className: string,
+  className?: string,
   /**
-   * One of ['currentColor', 'dark', 'light', 'primary', 'primary-hc', 'secondary', 'tertiary']
+   * icon color
    */
-  color: 'currentColor'|
+  color?: 'currentColor'|
   'dark'|
   'light'|
   'primary'|
   'primary-hc'|
   'secondary'|
   'tertiary',
-  /**
-   * Name of icon to render.
-   */
-  icon: keyof typeof icons,
 
   /**
    * Rotate the icon by degrees [90, 180, 270]
    */
-  rotate: 0 | 90 | 180 | 270
+  rotate?: 0 | 90 | 180 | 270
   /**
    * one of [xsmall: .5em, small: .75em, normal: 1em, medium: 1.5em, large: 2em]
    */
-  size: 'xsmall'| 'small'| 'normal'| 'medium'| 'large'
+  size?: 'xsmall'| 'small'| 'normal'| 'medium'| 'large'
 };
 
 /**
@@ -56,16 +56,15 @@ export const Icon = (props: IconProps) => {
 
   const {
     icon,
-    className,
-    color,
-    size,
-    rotate,
-    onClick,
-    customStyling,
-    onFocus,
-    onMouseDown
+    color = 'currentColor',
+    className = null,
+    rotate = null,
+    size = 'normal',
+    onClick = () => {},
+    onFocus = () => {},
+    onMouseDown = () => {},
+    customStyling = {}
   } = props
-
 
   return (
     <span
