@@ -1,0 +1,59 @@
+.spinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+&.base {
+     width: 1em;
+     height: 1em;
+ }
+
+&.small {
+     width: 2em;
+     height: 2em;
+ }
+
+&.medium {
+     width: 3em;
+     height: 3em;
+ }
+
+&.large {
+     width: 4em;
+     height: 4em;
+ }
+}
+
+.spinnerBar {
+    animation: spin 1.2s linear infinite;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    width: 20%;
+    height: 7.8%;
+    top: 46.1%;
+    left: 40%;
+
+&.primary {
+     background-color: var(--blue);
+ }
+
+&.white {
+     background-color: var(--white);
+ }
+
+&.midgray {
+     background-color: var(--mid-gray);
+ }
+
+&.currentColor {
+     background-color: currentColor;
+ }
+}
+
+@keyframes spin {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
